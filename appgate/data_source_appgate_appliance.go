@@ -56,6 +56,7 @@ func dataSourceAppgateApplianceRead(d *schema.ResourceData, meta interface{}) er
 	d.SetId(appliance.Id)
 	d.Set("appliance_name", appliance.Name)
 	d.Set("appliance_id", appliance.Id)
+	d.Set("activated", appliance.GetActivated())
 	return nil
 }
 
